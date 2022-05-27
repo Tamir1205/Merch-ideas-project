@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 public class MerchDTO {
     private String merchId;
     private String ownerId;
-
     private String brandName;
 
 }
