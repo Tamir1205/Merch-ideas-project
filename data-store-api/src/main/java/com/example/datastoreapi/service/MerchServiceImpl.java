@@ -73,6 +73,7 @@ public class MerchServiceImpl implements MerchService {
         MerchEntity merchEntity = modelMapper.map(merchRequest, MerchEntity.class);
         MerchEntity dbEntity = merchRepository.getMerchEntityByMerchId(merchEntity.getMerchId());
         merchEntity.setId(dbEntity.getId());
+        merchEntity.setVotes(merchEntity.getVotes() + 1);
         merchEntity = merchRepository.save(merchEntity);
         return modelMapper.map(merchEntity, MerchResponse.class);
     }

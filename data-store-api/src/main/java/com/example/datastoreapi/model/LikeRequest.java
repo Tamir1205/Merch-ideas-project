@@ -4,14 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class MerchDTO {
+@Data
+public class LikeRequest {
+    private String likeId;
+
     private String merchId;
 
-    private String ownerId;
-
-    private String brandName;
-
+    private String userId;
 }

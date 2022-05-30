@@ -7,11 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class MerchDTO {
+public class DislikeResponse {
+    private String dislikeId;
     private String merchId;
-
-    private String ownerId;
-
-    private String brandName;
-
+    private String userId;
 }

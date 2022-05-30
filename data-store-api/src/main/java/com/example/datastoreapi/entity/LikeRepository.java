@@ -8,12 +8,22 @@ import java.util.List;
 
 @Repository
 public interface LikeRepository extends CrudRepository<LikeEntity,Long> {
-    List<LikeEntity> getAllBy();
+//    Boolean existsLikeEntitiesByUserIdAndMerch(String userId, MerchEntity merch);
+//
+//    Integer countLikeEntityByMerch(MerchEntity merch);
 
-    Boolean existsLikeModelByUserIdAndMerchId(String userId , String merchId);
+    List<LikeEntity> getLikeEntityByMerchId(String merchId);
+
+    LikeEntity getLikeEntityByMerchIdAndUserId(String merchId, String userId);
 
     @Transactional
-    void deleteLikeModelByUserIdAndMerchId(String userId , String merchId);
+    void deleteLikeEntityByMerchIdAndUserId(String merchId, String userId);
+    //    List<LikeEntity> getAllBy();
 
-    long countByMerchId(String merchId);
+//    Boolean existsLikeModelByUserIdAndMerchId(String userId , String merchId);
+//
+//    @Transactional
+//    void deleteLikeModelByUserIdAndMerchId(String userId , String merchId);
+//
+//    long countByMerchId(String merchId);
 }
