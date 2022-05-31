@@ -28,17 +28,17 @@ public class LikeController {
         }
     }
     @GetMapping
-    public boolean getLikeByEventIdAndUserId(@RequestParam String merchId, @RequestParam String userId){
+    public boolean getLikeByMerchIdAndUserId(@RequestParam String merchId, @RequestParam String userId){
         return likeService.getLikeByMerchIdAndUserId(merchId, userId);
     }
     @GetMapping("/all")
-    private int getLikesByEventId(@RequestParam String merchId){
+    private int getLikesByMerchId(@RequestParam String merchId){
         return likeService.getLikesByMerchId(merchId);
     }
 
 
     @DeleteMapping
-    public void deleteLikeByEventIdAndMerchId(@RequestParam String merchId, @RequestParam String userId){
+    public void deleteLikeByMerchIdAndUserId(@RequestParam String merchId, @RequestParam String userId){
         likeService.deleteLikeByMerchIdAndUserId(merchId, userId);
     }
 

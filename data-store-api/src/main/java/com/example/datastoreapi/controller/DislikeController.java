@@ -26,16 +26,16 @@ public class DislikeController {
         }
     }
     @GetMapping("/all")
-    private int getDislikesByEventId(@RequestParam String merchId){
+    private int getDislikesByMerchId(@RequestParam String merchId){
         return dislikeService.getDislikesByMerchId(merchId);
     }
     @GetMapping
-    public boolean getDislikeByEventIdAndUserId(@RequestParam String merchId, @RequestParam String userId){
+    public boolean getDislikeByMerchIdAndUserId(@RequestParam String merchId, @RequestParam String userId){
         return dislikeService.getDislikeByMerchIdAndUserId(merchId, userId);
     }
 
     @DeleteMapping
-    public void deleteDislikeByEventIdAndUserId(@RequestParam String merchId, @RequestParam String userId){
+    public void deleteDislikeByMerchIdAndUserId(@RequestParam String merchId, @RequestParam String userId){
         dislikeService.deleteDislikeByMerchIdAndUserId(merchId, userId);
     }
 
