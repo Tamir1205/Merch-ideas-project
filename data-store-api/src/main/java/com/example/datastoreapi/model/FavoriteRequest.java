@@ -1,6 +1,5 @@
 package com.example.datastoreapi.model;
 
-import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,9 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CategoryRequest {
-    @NotNull
-    String categoryName;
-
-    Integer numberInSorting;
+public class FavoriteRequest {
+    private String favoriteId;
+    private String userId;
+    private String merchId;
 }
