@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DislikeResponse {
     private String dislikeId;
+
     private String merchId;
+
     private String userId;
 }
