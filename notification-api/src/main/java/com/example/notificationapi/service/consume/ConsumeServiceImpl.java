@@ -18,7 +18,7 @@ public class ConsumeServiceImpl implements ConsumeService {
     private SendService sendService;
 
     @Override
-    @KafkaListener(id = "${spring.kafka.consumer.group-id}", topics = "${spring.kafka.topic.merch}",
+    @KafkaListener(id = "${spring.kafka.consumer.group-id1}", topics = "${spring.kafka.topic.merch}",
             containerFactory = "singleFactoryMerch")
     public void consumeMerchMessage(MerchDTO message) {
         log.info("Message with Merch: {} successfully consumed", message);
@@ -26,7 +26,7 @@ public class ConsumeServiceImpl implements ConsumeService {
     }
 
     @Override
-    @KafkaListener(id = "${spring.kafka.consumer.group-id}", topics = "${spring.kafka.topic.comment}",
+    @KafkaListener(id = "${spring.kafka.consumer.group-id2}", topics = "${spring.kafka.topic.comments}",
             containerFactory = "singleFactoryComment")
     public void consumeCommentMessage(CommentDTO message) {
         log.info("Message with Comment: {} successfully consumed", message);
